@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TempestAI — One AI. Endless Possibilities.</title>
+<meta name="description" content="TempestAI — chat, study, code, write, analyze files and more.">
+<style>
+:root{--bg:#07080d;--panel:#0e1119;--line:#252b3a;--text:#f5f7ff;--muted:#9ba5ba;--purple:#7b5cff;--cyan:#19c9ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 70% 0,#211849 0,#07080d 35%),#07080d;color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
+nav{height:70px;position:fixed;inset:0 0 auto;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:#07080ddd;border-bottom:1px solid #202534;backdrop-filter:blur(14px)}
+.logo{font-size:22px;font-weight:900}.logo span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;color:transparent}
+.links{display:flex;gap:25px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
+button{font:inherit}.btn{border:0;border-radius:10px;padding:13px 20px;font-weight:800;cursor:pointer}.primary{color:#fff;background:linear-gradient(90deg,var(--purple),#596dff)}.ghost{color:#fff;background:#10131b;border:1px solid #333a4b}
+.hero{min-height:100vh;padding:145px 6% 70px;display:grid;place-items:center;text-align:center}.badge{display:inline-block;padding:8px 14px;border:1px solid #3c3560;border-radius:99px;background:#111024;color:#cfc7ff;font-size:12px;font-weight:800}
+h1{font-size:clamp(50px,9vw,94px);line-height:.96;letter-spacing:-5px;margin:25px 0}.grad{background:linear-gradient(100deg,#fff,#a88cff,#46dcff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:720px;color:var(--muted);font-size:19px;margin:auto}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px 0}
+.preview{max-width:900px;margin:45px auto 0;text-align:left;background:#0c0f16;border:1px solid #2b3242;border-radius:18px;overflow:hidden;box-shadow:0 30px 90px #000b}.bar{padding:12px 16px;border-bottom:1px solid #252b38;color:#718097;font-size:12px}.chat{padding:22px}.msg{max-width:76%;padding:13px 15px;border-radius:12px;margin:10px 0;font-size:14px}.user{margin-left:auto;background:#1a2030}.ai{background:#111722;border:1px solid #263043;color:#e0e7f5}
+section{max-width:1150px;margin:auto;padding:90px 6%}h2{font-size:40px;letter-spacing:-1px;margin:0 0 10px}section>p{color:var(--muted);margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}.card{background:#0d1017;border:1px solid var(--line);border-radius:15px;padding:22px}.card:hover{border-color:#4a536b;transform:translateY(-2px)}.icon{font-size:25px}.card h3{margin:11px 0 6px}.card p{margin:0;color:#919caf;font-size:14px}
+.price{font-size:34px;font-weight:900;margin:14px 0}.price small{font-size:12px;color:#7f899d}.list{list-style:none;padding:0;color:#aeb8c9}.list li{margin:10px 0}.list li:before{content:"✓";color:#62e1a0;margin-right:9px}
+footer{border-top:1px solid #202534;padding:35px 6%;text-align:center;color:#69748b}
+#app{display:none;min-height:100vh;padding-top:90px}.app{max-width:1100px;margin:auto;padding:25px}.box{display:grid;grid-template-columns:210px 1fr;height:650px;background:#0d1017;border:1px solid #272d3b;border-radius:16px;overflow:hidden}.side{border-right:1px solid #272d3b;padding:15px}.side button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#aab4c6;padding:11px;border-radius:8px;cursor:pointer}.side button:hover,.side .active{background:#171c28;color:#fff}.main{display:flex;flex-direction:column}.top{padding:18px;border-bottom:1px solid #272d3b}.messages{flex:1;padding:20px;overflow:auto}.composer{display:flex;gap:9px;padding:14px;border-top:1px solid #272d3b}.composer input{flex:1;background:#111620;border:1px solid #303849;color:#fff;padding:13px;border-radius:10px;outline:0}
+@media(max-width:700px){.links{display:none}.box{grid-template-columns:1fr}.side{display:none}h1{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+<nav>
+<a class="logo" href="#" onclick="showSite()">Tempest<span>AI</span></a>
+<div class="links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#about">About</a></div>
+<button class="btn primary" onclick="openApp()">Try TempestAI</button>
+</nav>
+
+<main id="site">
+<header class="hero"><div>
+<div class="badge">✦ AI ASSISTANT • BUILT FOR EVERYTHING</div>
+<h1>One AI.<br><span class="grad">Endless Possibilities.</span></h1>
+<p>Chat, learn, code, write, analyze files, understand images and brainstorm ideas — all in one AI workspace.</p>
+<div class="actions"><button class="btn primary" onclick="openApp()">Start Creating Free</button><a class="btn ghost" href="#features">Explore Features</a></div>
+<div class="preview"><div class="bar">TempestAI • New conversation</div><div class="chat">
+<div class="msg user">Explain this difficult topic like I'm a beginner.</div>
+<div class="msg ai">Absolutely. I'll break it into simple steps, then give you an example and practice questions.</div>
+<div class="msg user">Now make a study quiz from it.</div>
+<div class="msg ai">Done — here's a quiz with multiple-choice and challenge questions.</div>
+</div></div>
+</div></header>
+
+<section id="features"><h2>Everything in one place.</h2><p>TempestAI is designed as a flexible AI workspace.</p>
+<div class="grid">
+<div class="card"><div class="icon">💬</div><h3>AI Chat</h3><p>Ask questions, brainstorm, explain concepts and have natural conversations.</p></div>
+<div class="card"><div class="icon">📚</div><h3>Study</h3><p>Explanations, quizzes, flashcards and revision help.</p></div>
+<div class="card"><div class="icon">💻</div><h3>Coding</h3><p>Generate, explain and debug code across popular languages.</p></div>
+<div class="card"><div class="icon">📎</div><h3>Files</h3><p>Analyze documents and answer questions about uploaded material.</p></div>
+<div class="card"><div class="icon">🖼️</div><h3>Vision</h3><p>Understand images, screenshots, charts and diagrams.</p></div>
+<div class="card"><div class="icon">✍️</div><h3>Writing</h3><p>Draft, edit, summarize and improve writing.</p></div>
+<div class="card"><div class="icon">🌐</div><h3>Research</h3><p>Architecture ready for web search and citations.</p></div>
+<div class="card"><div class="icon">🧰</div><h3>Tools</h3><p>Connect calculators, search, image generation and more.</p></div>
+</div></section>
+
+<section id="pricing"><h2>Simple plans.</h2><p>Start free and upgrade when you need more.</p>
+<div class="grid">
+<div class="card"><h3>Free</h3><div class="price">$0 <small>/ month</small></div><ul class="list"><li>Basic AI chat</li><li>Limited files</li><li>Study mode</li><li>Coding assistance</li></ul><button class="btn primary" onclick="openApp()">Get Started</button></div>
+<div class="card"><h3>Plus</h3><div class="price">$5 <small>/ month</small></div><ul class="list"><li>Higher limits</li><li>Advanced models</li><li>More uploads</li><li>Image tools</li></ul><button class="btn primary" onclick="demoPay()">Choose Plus</button></div>
+<div class="card"><h3>Pro</h3><div class="price">$15 <small>/ month</small></div><ul class="list"><li>Highest limits</li><li>Advanced analysis</li><li>Research tools</li><li>Priority processing</li></ul><button class="btn primary" onclick="demoPay()">Choose Pro</button></div>
+</div></section>
+
+<section id="about"><h2>Built to grow.</h2><p>This is a working frontend demo. Connect a real AI provider, authentication, file analysis, search and billing backend to turn it into a production AI service.</p></section>
+<footer>© 2026 TempestAI • Independent AI software</footer>
+</main>
+
+<section id="app"><div class="app"><div class="box">
+<aside class="side"><button class="active">✦ New chat</button><button>💬 Conversations</button><button>📚 Study</button><button>💻 Code</button><button>📎 Files</button><button>⚙ Settings</button><br><button onclick="showSite()">← Back</button></aside>
+<div class="main"><div class="top"><b>TempestAI</b><span style="float:right;color:#62e1a0;font-size:13px">AI Online</span></div>
+<div class="messages" id="messages"><div class="msg ai">Hey! I'm TempestAI. Ask me anything. This demo shows the interface; connect a real AI API for live answers.</div></div>
+<div class="composer"><input id="prompt" placeholder="Message TempestAI..." onkeydown="if(event.key==='Enter')send()"><button class="btn primary" onclick="send()">Send</button></div>
+</div></div></div></section>
+
+<script>
+function openApp(){document.getElementById("site").style.display="none";document.getElementById("app").style.display="block";window.scrollTo(0,0)}
+function showSite(){document.getElementById("app").style.display="none";document.getElementById("site").style.display="block";window.scrollTo(0,0)}
+function demoPay(){alert("Demo only — connect a real payment provider before accepting subscriptions.")}
+const API_URL = "/api/chat";
+
+async function send(){
+  const i=document.getElementById("prompt"),v=i.value.trim();
+  if(!v)return;
+  const m=document.getElementById("messages");
+  m.innerHTML+='<div class="msg user">'+safe(v)+'</div>';
+  i.value="";
+  const thinking=document.createElement("div");
+  thinking.className="msg ai";
+  thinking.textContent="Thinking…";
+  m.appendChild(thinking);
+  m.scrollTop=m.scrollHeight;
+
+  try{
+    const res=await fetch(API_URL,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({message:v})
+    });
+    const data=await res.json();
+    if(!res.ok) throw new Error(data.error||"Request failed");
+    thinking.textContent=data.reply||"I couldn't generate a response.";
+  }catch(err){
+    thinking.textContent="I couldn't connect to TempestAI right now. Check that the AI backend is running.";
+    console.error(err);
+  }
+  m.scrollTop=m.scrollHeight;
+}
+
+function safe(s){
+  return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+}
+</script>
+</body>
+</html>
